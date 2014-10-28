@@ -7,11 +7,11 @@ Open Type vs. Closed Type
 
 ##Type Constraints
 1. Reference Type Constraints
-	- T : class
+	- `T : class`
 2. Value Type Constraints
-	- T : struct
+	- `T : struct`
 3. Constructor Type Constraints
-	- T : new()
+	- `T : new()`
 	- Must be *last* constraint for any particular type parameter  
 	- For any value type, any nonstatic, nonabstract class without any explicitly declared constructors, any nonabstract class with any explicit public parameterless constructor
 	- Can be useful when you need to use factory-like patterns
@@ -20,10 +20,10 @@ Open Type vs. Closed Type
 	- You can specify that one type argument be convertible to another type argument - this is called a *type parameter* constraint
 	- You can specify multiple interfaces but only one class
 	- The type you specified cannot be a value type, a sealed class (such as string), or any of the following "special" types:
-		- System.Object
-		- System.Enum
-		- System.ValueType
-		- System.Delegate
+		- `System.Object`
+		- `System.Enum`
+		- `System.ValueType`
+		- `System.Delegate`
 		
 		**Workaround to the limitations: http://code.google.com/p/unconstrained-melody/*
 
@@ -49,7 +49,7 @@ Compare itself with another value:
 	- IEquatable<T>
 
 ##Static fields and Static Constructors
-Static fields belong to the type they're declared in. If you declare a static field x in class SomeClass, there's exactly one SomeClass.x field per *application domain*, no matter how many instances of SomeClass you create, and no matter how many types derives from SomeClass. Variables decorated with `[ThreadStatic]` violate this rule, too.
+Static fields belong to the type they're declared in. If you declare a static field x in class `SomeClass`, there's exactly one `SomeClass.x` field per *application domain*, no matter how many instances of `SomeClass` you create, and no matter how many types derives from `SomeClass`. Variables decorated with `[ThreadStatic]` violate this rule, too.
 
 Each *closed* generic type has its own set of static fields: one static field per closed type. The same applies for static initializers and static constructors. Just as with nongeneric types, the static constructor for any closed type is only executed once.
 
