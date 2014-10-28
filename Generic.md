@@ -53,7 +53,7 @@ Static fields belong to the type they're declared in. If you declare a static fi
 
 Each *closed* generic type has its own set of static fields: one static field per closed type. The same applies for static initializers and static constructors. Just as with nongeneric types, the static constructor for any closed type is only executed once.
 
-For nested generic types, the same rule applies. That being said, there is only one Outer<<int>int>.Inner, or Outer<<string>string>.Inner, with separate set of static fields.
+For nested generic types, the same rule applies. That being said, there is only one `Outer<int>.Inner`, or `Outer<string>.Inner`, with separate set of static fields.
 
 ##How the JIT Compiler Handles Generics
 The JIT creates different code for each closed type with a type argument that's a value type. But it shares the native code generated for all the closed type that use a reference type as the type argument. It can do this because all references are same size. The JIT can use the same optimizations to store references in registers regardless of the type.
