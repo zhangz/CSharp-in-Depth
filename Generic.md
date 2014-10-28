@@ -100,5 +100,5 @@ There are two ways of using typeof with generic types - one retrieves the generi
 ##Limitations of generics in C#
 1. Lack of generic variance (covariance and contravariance). Generics are invariant. 
  
-	With covariance, you were trying to convert from SomeType<Circle> to SomeType<IShape>. Contravariance is anout converting the other way - from SomeType<IShape> to SomeType<Circle>. Covariance is safe when SomeType only describes operations that returns the type parameter, and contravariance is safe when SomeType only describes operations that accept the type parameter.
+	With covariance, you were trying to convert from 'SomeType<Circle>' to 'SomeType<IShape>'. Contravariance is about converting the other way - from 'SomeType<IShape>' to 'SomeType<Circle>'. Covariance is safe when SomeType only describes operations that returns the type parameter, and contravariance is safe when SomeType only describes operations that accept the type parameter.
 2. 
