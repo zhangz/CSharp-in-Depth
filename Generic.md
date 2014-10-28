@@ -49,7 +49,7 @@ Compare itself with another value:
 	- IEquatable<T>
 
 ##Static fields and Static Constructors
-Static fields belong to the type they're declared in. If you declare a static field x in class `SomeClass`, there's exactly one `SomeClass.x` field per *application domain*, no matter how many instances of `SomeClass` you create, and no matter how many types derives from `SomeClass`. Variables decorated with `[ThreadStatic]` violate this rule, too.
+Static fields belong to the type they're declared in. If you declare a static field `x` in class `SomeClass`, there's exactly one `SomeClass.x` field per *application domain*, no matter how many instances of `SomeClass` you create, and no matter how many types derives from `SomeClass`. Variables decorated with `[ThreadStatic]` violate this rule, too.
 
 Each *closed* generic type has its own set of static fields: one static field per closed type. The same applies for static initializers and static constructors. Just as with nongeneric types, the static constructor for any closed type is only executed once.
 
