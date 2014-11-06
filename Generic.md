@@ -25,7 +25,7 @@ Open Type vs. Closed Type
 		- `System.ValueType`
 		- `System.Delegate`
 		
-		- Workaround to the limitations: http://code.google.com/p/unconstrained-melody/
+	  Workaround to the limitations: http://code.google.com/p/unconstrained-melody/
 
 ##The Generic Comparison Interfaces
 Compare values for ordering:
@@ -99,8 +99,7 @@ There are two ways of using typeof with generic types - one retrieves the generi
 
 ##Limitations of generics in C#
 1. **Lack of generic variance (covariance and contravariance). Generics are invariant.** With covariance, you were trying to convert from `SomeType<Circle>` to `SomeType<IShape>`. Contravariance is about converting the other way - from `SomeType<IShape>` to `SomeType<Circle>`. Covariance is safe when `SomeType` only describes operations that returns the type parameter, and contravariance is safe when `SomeType` only describes operations that accept the type parameter.
-2. **Lack of operator constraints or a "numeric" constraint.** 
-- A workaround http://yoda.arachsys.com/csharp/genericoperators.html
+2. **Lack of operator constraints or a "numeric" constraint.** A workaround to this limitation  http://yoda.arachsys.com/csharp/genericoperators.html
 3. **Lack of generic properties, indexers, and other member types.**
 
 ##Main benefits of generics:
