@@ -1,7 +1,7 @@
 ##Generic
 Type Parameter vs. Type Argument
 
-Unbound Genric Type vs. Constructed Type 
+Unbound Generic Type vs. Constructed Type 
 
 Open Type vs. Closed Type
 
